@@ -1,0 +1,92 @@
+{
+    "name": "auto-run-command",
+    "displayName": "Auto Run Command",
+    "description": "Run a vscode command on project init. Made to run wallaby.js automatically when a project is opened",
+    "version": "1.6.0",
+    "publisher": "PhungXuanAnh",
+	 "license": "MIT",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "icon": "icon.png",
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "homepage": "https://github.com/GabiGrin/vscode-auto-run-command",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GabiGrin/vscode-auto-run-command.git"
+    },
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "auto-run-command.placeholder-command",
+                "title": "Auto Run Command Placeholder"
+            }
+        ],
+        "configuration": {
+            "title": "Auto Run Command config",
+            "description": "",
+            "type": "object",
+            "properties": {
+                "auto-run-command.rules": {
+                    "type": "array",
+                    "title": "Auto Run Command Rules",
+                    "default": [
+                        {
+                            "condition": "always",
+                            "command": "auto-run-command.placeholder-command",
+                            "message": "Running a dummy command"
+                        }
+                    ],
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "command": {
+                                "type": [
+                                    "string",
+                                    "array"
+                                ],
+                                "description": "Command to run when the rule is matched"
+                            },
+                            "condition": {
+                                "type": [
+                                    "string",
+                                    "array"
+                                ],
+                                "description": "Condition to match against. See documentation for possible condition"
+                            },
+                            "message": {
+                                "type": "string",
+                                "description": "A descriptive message to show when the condition is met. Defaults to the robotic condition text"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "test": "npm run compile && node ./out/test/index.js"
+    },
+    "devDependencies": {
+        "typescript": "^4.9.5",
+        "@types/vscode": "^1.5.0",
+        "@types/node": "^16.18.0",
+        "@types/mocha": "^10.0.0",
+        "@types/glob": "^8.1.0",
+        "@vscode/test-electron": "^2.3.0",
+        "mocha": "^10.2.0",
+        "glob": "^8.1.0"
+    },
+    "dependencies": {
+        "is-docker": "^2.0.0"
+    }
+}
