@@ -2,7 +2,7 @@
     "name": "auto-run-command-with-condition",
     "displayName": "Auto Run Command With Condition",
     "description": "Run a vscode command on project init. Made to run wallaby.js automatically when a project is opened",
-    "version": "1.6.4",
+    "version": "1.6.5",
     "publisher": "PhungXuanAnh",
     "license": "MIT",
     "engines": {
@@ -24,7 +24,7 @@
     "contributes": {
         "commands": [
             {
-                "command": "auto-run-command.placeholder-command",
+                "command": "auto-run-command-with-condition.placeholder-command",
                 "title": "Auto Run Command Placeholder"
             }
         ],
@@ -33,13 +33,13 @@
             "description": "",
             "type": "object",
             "properties": {
-                "auto-run-command.rules": {
+                "auto-run-command-with-condition.rules": {
                     "type": "array",
                     "title": "Auto Run Command Rules",
                     "default": [
                         {
                             "condition": "always",
-                            "command": "auto-run-command.placeholder-command",
+                            "command": "auto-run-command-with-condition.placeholder-command",
                             "message": "Running a dummy command"
                         }
                     ],
