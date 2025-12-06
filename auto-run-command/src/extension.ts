@@ -4,7 +4,7 @@ import { runShellCommand } from './lib/run-shell-command';
 
 import * as vscode from 'vscode';
 
-const nameSpace = 'auto-run-command';
+const nameSpace = 'auto-run-command-with-condition';
 
 interface Rule {
 	command: string | string[];

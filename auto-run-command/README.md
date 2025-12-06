@@ -1,5 +1,4 @@
-# VSCode Extension - [auto-run-command](https://marketplace.visualstudio.com/items?itemName=PhungXuanAnh.auto-run-command#review-details)
-[![Build Status](https://travis-ci.org/GabiGrin/vscode-auto-run-command.svg?branch=master)](https://travis-ci.org/GabiGrin/vscode-auto-run-command)
+# VSCode Extension - [auto-run-command-with-condition](https://marketplace.visualstudio.com/items?itemName=PhungXuanAnh.auto-run-command-with-condition#review-details)
 
 Run a command when VSCode starts, based on some conditions.
 Built to run [Wallaby.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.wallaby-vscode) automatically on projects that have a config.
@@ -22,7 +21,7 @@ Note: commands run after a 5s delay to ensure the command was registered. If the
 1. Simple -Running wallaby.js when vscode opens on a folder with a config file
    
 ```json
-"auto-run-command.rules": [
+"auto-run-command-with-condition.rules": [
     {
       "condition": "hasFile: wallaby.js",
       "command": "wallaby.start",
@@ -34,7 +33,7 @@ Note: commands run after a 5s delay to ensure the command was registered. If the
 1. Running some command (assuming an extension exposed it) when vscode opens on a specific project containing a specific file
    
 ```json
-"auto-run-command.rules": [
+"auto-run-command-with-condition.rules": [
     {
       "condition": [
         "hasFile: special-file",
@@ -49,7 +48,7 @@ Note: commands run after a 5s delay to ensure the command was registered. If the
 3. Running a command only if a shell command succeeds (e.g., checking if in a git repository)
    
 ```json
-"auto-run-command.rules": [
+"auto-run-command-with-condition.rules": [
   {
     "condition": "commandRunSuccess: git rev-parse --is-inside-work-tree",
     "command": "git.sync",
@@ -67,7 +66,7 @@ If you set the `shellCommand` argument to true, then it will run a shell command
 Example:
 
 ```json
-"auto-run-command.rules": [
+"auto-run-command-with-condition.rules": [
   {
     "condition": [
       "hasFile: special-file",

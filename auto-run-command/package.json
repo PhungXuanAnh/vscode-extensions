@@ -1,10 +1,10 @@
 {
-    "name": "auto-run-command",
-    "displayName": "Auto Run Command",
+    "name": "auto-run-command-with-condition",
+    "displayName": "Auto Run Command With Condition",
     "description": "Run a vscode command on project init. Made to run wallaby.js automatically when a project is opened",
-    "version": "1.6.0",
+    "version": "1.6.4",
     "publisher": "PhungXuanAnh",
-	 "license": "MIT",
+    "license": "MIT",
     "engines": {
         "vscode": "^1.5.0"
     },
@@ -15,10 +15,10 @@
     "activationEvents": [
         "*"
     ],
-    "homepage": "https://github.com/GabiGrin/vscode-auto-run-command",
+    "homepage": "https://github.com/PhungXuanAnh/vscode-extensions",
     "repository": {
         "type": "git",
-        "url": "https://github.com/GabiGrin/vscode-auto-run-command.git"
+        "url": "https://github.com/PhungXuanAnh/vscode-extensions.git"
     },
     "main": "./out/src/extension",
     "contributes": {
