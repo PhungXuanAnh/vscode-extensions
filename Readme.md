@@ -1,0 +1,1 @@
+This repository contains some usefull vscode extensions
