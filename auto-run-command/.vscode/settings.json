@@ -7,12 +7,12 @@
         "out": true // set this to false to include "out" folder in search results
     },
     "typescript.tsdk": "./node_modules/typescript/lib", // we want to use the TS server from our node_modules folder to control its version
-    "auto-run-command-with-condition.rules": [
-        {
-            "condition": "commandRunSuccess: ls /tmp",
-            "command": "echo 'This is test message' > /tmp/test-auto-run-command-with-condition.txt",
-            "shellCommand": true,
-            "message": "Auto run: Echo to /tmp/test-auto-run-command-with-condition.txt"
-        }
-    ]
+    // "auto-run-command-with-condition.rules": [
+    //     {
+    //         "condition": "commandRunSuccess: ls /tmp",
+    //         "command": "echo 'This is test message' > /tmp/test-auto-run-command-with-condition.txt",
+    //         "shellCommand": true,
+    //         "message": "Auto run: Echo to /tmp/test-auto-run-command-with-condition.txt"
+    //     }
+    // ]
 }
